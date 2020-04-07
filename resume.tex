@@ -47,8 +47,8 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+  \item{
+    \textbf{#1}{: #2}
   }
 }
 
@@ -63,7 +63,7 @@
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-1pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -83,10 +83,21 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large David Corcoran} & david@topaz.technology\\
+  \textbf{\Large David Corcoran} & dave.corcoran@gmail.com\\
   & +44-7794-740425 \\
 \end{tabular*}
 
+
+%-----------About-----------------
+\section{About}
+  \resumeItemListStart
+  	\setlength\itemsep{0em}
+	\item 20 years of software design and development experience. Including leading small development teams.
+	\item Started two successful software companies.
+	\item 13 years working in commodities trading and risk management.
+	\item Over the years I have worked in most major programming languages.
+    \item Experience designing large scale distributed systems.
+  \resumeItemListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -106,26 +117,33 @@
   
     \resumeSubheading
       {Topaz Technology Ltd}{London, UK}
-      {Developer}{Jan 2016 - present}
+      {Founder, Lead Developer - Scala, Akka, MonetDB, Docker, Kubernetes}{Jan 2016 - present}
+ 
+      {I am the technical lead on the Topaz commodity trading and risk management system. I have helped design the system from scratch and have worked on every part of it. In four years we have written a system that is in use at some of the world's largest trading companies. Some of the more notable areas I have written the code for are: }
       \resumeItemListStart    
-        \resumeItem{CTRM system}
-        {Three ex-Trafigura colleagues and I started Topaz Technology. We are building a real time P\&L and risk management system aimed both at commodities traders and senior management. The system is based on the team's decades of experience in this area, and aims to avoid the common shortcomings of other systems in this market. The system we've written uses event sourcing (Akka persistence) to provide an audit trail, Akka cluster for scalability and MonetDB for real time pivoting on huge datasets. It supports oil/gas/coal/freight, soft derivatives, oil physicals and fixed income. The system is written in Scala with the primary goals of very large scalability, easy extendibility and ease of use.}
+      	\item Full valuation explanation, which allows any valuation by the system to show every input and how it was calculated. Any value on screen can be explained as a tree where the leaf nodes are raw inputs into the system.
+        \item Event sourcing using Akka persistence to provide an audit trail. The system runs in real time against snapshots of this audit trail. This makes every change from reference data, market data or any other input, explainable.
+        \item Pluggable valuation and Greeks code for oil, gas, coal, power, freight, metals, agricultural derivatives and oil physicals. This code is highly configurable, at runtime, to meet each individual company's and user's valuation preferences (models, day count conventions, interpolation types etc.).
+        \item Clustering and distributed job processing code (using Akka cluster) to allow the application to scale to millions of trades and hundreds of concurrent users. 
+        \item Kubernetes for deploying and scaling the application on demand.
+        \item Extensive Excel integration which allows trade, reference data and market data uploads. Models, reports and valuation utilities are all exposed as functions in Excel.
+        
         \resumeItemListEnd
       
     \resumeSubheading
       {Trafigura Ltd}{London, UK}
-      {Lead developer}{Oct 2009 - Dec 2015}
+      {Lead developer - Scala, Akka, event sourcing, C++ Excel plugin}{Oct 2009 - Dec 2015}
       \resumeItemListStart    
         \resumeItem{Metals derivatives VaR system}
-          {I was part of a team of three, hired to write a VaR system from scratch in Scala. As well as reporting VaR the system had an intuitive UI that allowed you to very quickly investigate in detail the reason behind the VaR numbers. Reports were shown as a pivot that allowed you to drill down on any values to see their composition. You could also run scenario analysis reports to help explain unintuitive results.}
+          {I was part of a team of three, hired to write an oil and metals derivatives VaR system from scratch in Scala. As well as reporting VaR the system had an intuitive UI that allowed you to very quickly investigate in detail the reason behind the VaR numbers. Reports were shown as a pivot that allowed you to drill down on any values to see their composition. You could also run scenario analysis reports to help explain unintuitive results.}
           
         \resumeItem{Real time oil risk management}
           {This system grew out of the above VaR system and allowed real time pricing of oil options and other derivatives. It could be interacted with through Excel with pivots displaying either in Excel or in the pivot UI. The application was well liked and as a result was extended to reporting EOD for books with complex derivative positions as it made explaining risk and P\&L easy. I ended up as the lead developer on this project overseeing all development and reviewing all PRs.}
       \resumeItemListEnd
-
+	\goodbreak
     \resumeSubheading
       {EDF Trading}{London, UK}
-      {Quantitative Developer}{March 2007 - Sep 2009}
+      {Quantitative Developer - Java, Scala, Ruby, Octave, Swing}{March 2007 - Sep 2009}
       \resumeItemListStart
         \resumeItem{Power/gas/oil risk management system}
           {I was part of a small team of front-office developers who wrote this system, initially in Java, but switching to Scala in 2008. The systems primary goal was to value the optionality inherent in physical assets, such as power plants and hydroelectric dams. The system could value over 40 trade types on underlyings which included oil, gas, coal, power, emissions and FX.}
@@ -139,10 +157,10 @@
 
     \resumeSubheading
       {Demonware}{Dublin, Ireland}
-      {Lead developer}{2003 - December 2006}
+      {Founder, Lead Developer - C++, Python, Erlang}{2003 - December 2006}
       \resumeItemListStart
         \resumeItem{Games network middleware}
-          {I was one of the founders, with three friends from Trinity College Dublin. We sold the company to Activision in 2007. The libraries we wrote allowed games to quickly add network state management as well as services like game discovery and user statistics (leaderboards). The library code was written in C++ with the server side code in Erlang and Python. }
+          {I was one of the founders, with three friends from Trinity College Dublin.  The libraries we wrote allowed games to quickly add network state management as well as services like game discovery and user statistics (leaderboards). The library code was written in C++ with the server side code in Erlang and Python. Activision started using Demonware in 2005, for Call Of Duty, and acquired the company in 2007. }
       \resumeItemListEnd
 
 
