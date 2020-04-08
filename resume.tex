@@ -92,11 +92,11 @@
 \section{About}
   \resumeItemListStart
   	\setlength\itemsep{0em}
-	\item 20 years of software design and development experience. Including leading small development teams.
+	\item 20 years of software design, development and team leading experience. 
 	\item Started two successful software companies.
+    \item Have designed large scale distributed systems.
 	\item 13 years working in commodities trading and risk management.
 	\item Over the years I have worked in most major programming languages.
-    \item Experience designing large scale distributed systems.
   \resumeItemListEnd
 
 %-----------EDUCATION-----------------
@@ -119,7 +119,7 @@
       {Topaz Technology Ltd}{London, UK}
       {Founder, Lead Developer - Scala, Akka, MonetDB, Docker, Kubernetes}{Jan 2016 - present}
  
-      {I am the technical lead on the Topaz commodity trading and risk management system. I have helped design the system from scratch and have worked on every part of it. In four years we have written a system that is in use at some of the world's largest trading companies. Some of the more notable areas I have written the code for are: }
+      {I am the technical lead on the Topaz commodity trading and risk management system. I helped design the system from scratch and have worked on every part of it. In four years we have written a system that is in use at some of the world's largest trading companies. Some of the more notable features I was responsible for include: }
       \resumeItemListStart    
       	\item Full valuation explanation, which allows any valuation by the system to show every input and how it was calculated. Any value on screen can be explained as a tree where the leaf nodes are raw inputs into the system.
         \item Event sourcing using Akka persistence to provide an audit trail. The system runs in real time against snapshots of this audit trail. This makes every change from reference data, market data or any other input, explainable.
@@ -138,7 +138,8 @@
           {I was part of a team of three, hired to write an oil and metals derivatives VaR system from scratch in Scala. As well as reporting VaR the system had an intuitive UI that allowed you to very quickly investigate in detail the reason behind the VaR numbers. Reports were shown as a pivot that allowed you to drill down on any values to see their composition. You could also run scenario analysis reports to help explain unintuitive results.}
           
         \resumeItem{Real time oil risk management}
-          {This system grew out of the above VaR system and allowed real time pricing of oil options and other derivatives. It could be interacted with through Excel with pivots displaying either in Excel or in the pivot UI. The application was well liked and as a result was extended to reporting EOD for books with complex derivative positions as it made explaining risk and P\&L easy. I ended up as the lead developer on this project overseeing all development and reviewing all PRs.}
+          {This system grew out of the above VaR system and allowed real time pricing of oil options and other derivatives. It both interacted with Excel and also had a pivot UI that made explaining P\&L and risk straightforward. The system was well liked and was extended to reporting EOD for books with complex derivative positions. I ended up as the lead developer, overseeing all development and reviewing all PRs.}
+
       \resumeItemListEnd
 	\goodbreak
     \resumeSubheading
@@ -146,13 +147,13 @@
       {Quantitative Developer - Java, Scala, Ruby, Octave, Swing}{March 2007 - Sep 2009}
       \resumeItemListStart
         \resumeItem{Power/gas/oil risk management system}
-          {I was part of a small team of front-office developers who wrote this system, initially in Java, but switching to Scala in 2008. The systems primary goal was to value the optionality inherent in physical assets, such as power plants and hydroelectric dams. The system could value over 40 trade types on underlyings which included oil, gas, coal, power, emissions and FX.}
+          {I was part of a small team of front-office developers who wrote this system, initially in Java, but switching to Scala in 2008. The primary goal was to value the optionality inherent in physical assets, such as power plants and hydroelectric dams. The system could value over 40 trade types on underlyings which included oil, gas, coal, power, emissions and FX.}
           
         \resumeItem{Grid for option valuation}
-			{The requirement to be able to value physical assets on demand meant having to use a compute grid. We tried several commercial grid systems before writing our own as none of these met our requirements. The grid was written in Scala and had remote class loading, which meant no manual redeploying.}
+			{The requirement to value physical assets on demand meant having to use a compute grid. We tried several commercial grid systems before writing our own as none of these met our requirements. The grid was written in Scala and had remote class loading, avoiding manual redeployment.}
           
         \resumeItem{Implied vol visualiser/calculator}
-          {I worked with the head of the derivatives desk to write him an app for live implied vol calculating. Broker prices for different oil option strategies were input, implied vols backed out and the resulting interpolated vol surface shown.}
+          {I worked with the head of the derivatives desk to write an app for live implied vol calculating. Broker prices for different oil option strategies were input, implied vols backed out and the resulting interpolated vol surface shown.}
       \resumeItemListEnd
 
     \resumeSubheading
